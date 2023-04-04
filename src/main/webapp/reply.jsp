@@ -29,16 +29,18 @@
         }
     %>
     <h1>Add New Reply</h1>
-    <form action="AddMessageServlet" method="post">
+    <form action="AddReplyServlet" method="post">
         <label for="title">Title:</label>
         <input type="text" name="title" required>
         <br>
         <label for="content">Content:</label>
         <textarea name="content" rows="10" cols="50" required></textarea>
         <br>
+         <input type="hidden" id="msgID" name="msgID" value="<%=messageId%>">
+        
         <input type="submit" value="Submit">
     </form>
-    <a href="reply.jsp?id=<%=messageId%>">Add Reply</a>
+    <%-- <a href="reply.jsp?id=<%=messageId%>">Add Reply</a> --%>
     
 </body>
 </html>

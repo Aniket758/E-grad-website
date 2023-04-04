@@ -2,27 +2,29 @@ package model;
 import java.util.Date;
 
 public class Reply {
-    private int replyId;
+    private int UserId;
     private int messageId;
     private String replyContent;
-    private Date replyDate;
+    private String replyDate;
     public Reply() {
   
     }
 
-    public Reply(int replyId, int messageId, String replyContent, Date replyDate) {
-        this.replyId = replyId;
+    public Reply(int messageId, String replyContent,int UserId) {
+        this.UserId = UserId;
         this.messageId = messageId;
         this.replyContent = replyContent;
-        this.replyDate = replyDate;
+    }
+    
+    
+
+    
+    public int getUserId() {
+        return UserId;
     }
 
-    public int getReplyId() {
-        return replyId;
-    }
-
-    public void setReplyId(int replyId) {
-        this.replyId = replyId;
+    public void setUserId(int UserId) {
+        this.UserId = UserId;
     }
 
     public int getMessageId() {
@@ -41,11 +43,11 @@ public class Reply {
         this.replyContent = replyContent;
     }
 
-    public Date getReplyDate() {
+    public String getReplyDate() {
         return replyDate;
     }
 
-    public void setReplyDate(Date replyDate) {
+    public void setReplyDate(String replyDate) {
         this.replyDate = replyDate;
     }
 }
